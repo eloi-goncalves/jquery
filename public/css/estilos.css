@@ -1,0 +1,29 @@
+.campo-digitacao {
+    font-size: 20px;
+    height: 180px;
+    border: 3px solid black;
+}
+
+.frase {
+    font-family: 20px;
+}
+
+.campo-digitacao-desabilitado {
+    background-color: lightgray;
+}
+
+.icones {
+    vertical-align: middle;
+}
+
+.campo-digitacao-certo {
+    border: 3px solid green;
+}
+
+.campo-digitacao-errado {
+    border: 3px solid red;
+}
+
+.delete {
+    
+}
