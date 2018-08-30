@@ -33,7 +33,7 @@ function verificaDigitacao() {
         textArea.addClass('campo-digitacao-errado');
     }
 }
-
+    
 
 textArea.on('input', () => { 
     const contFrase = textArea.val().split(/\S+/).length -1;

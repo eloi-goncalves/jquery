@@ -45,6 +45,10 @@ function inserePlacar() {
     //const botaoRemover = `<a href="#" class="remove-button"><i class="material-icons">delete</i></a>`;
     const linha = adicionarRegistro(usuario,qtPalavras);
     tabela.append(linha[0]);
+
+    /*Abrir o placar ao inserir o placar*/
+    $('.placar').slideDown(400);
+    adjustScrollPage();
 }
 
 
@@ -56,3 +60,12 @@ $('#mostrar-placar').click((event)=> {
    /* Display none ou block automaticamente
     $('.placar').toggle();*/
 });
+
+function adjustScrollPage(){
+   const topPlacar = $('.placar').offset().top;
+   const scrolling = `${topPlacar}px`;
+    $('html,body').animate({
+        scrollTop: scrolling
+    },1000);
+
+}
