@@ -36,3 +36,15 @@ body {
     color:red;
     display: none;
 }
+
+#spinner {
+    display: none;
+}
+
+#frase-id {
+    width: 50px;
+}
+
+#sync {
+    float: right;
+}

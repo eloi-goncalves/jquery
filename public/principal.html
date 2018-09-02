@@ -23,6 +23,10 @@
         </ul>
 
         <div class="center">
+            <img src="img/spinner.gif" alt="loading" id="spinner">
+        </div>
+
+        <div class="center">
             <p id="erro">Ocorreu um erro, tente novamente mais tarde. </p>
         </div>
 
@@ -31,6 +35,12 @@
             <a class="btn-floating btn-large waves-effect waves-light red" id="reiniciar-jogo"><i class="material-icons">restore</i></a>
             <a class="btn-floating btn-large waves-effect waves-light green" id="mostrar-placar"><i class="material-icons">arrow_drop_down</i></a>
             <a class="btn-floating btn-large waves-effect waves-light blue" id="atualiza-frase"><i class="material-icons">update</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light cyan" id="busca-frase"><i class="material-icons">repeat_one</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light yellow" id="sync"><i class="material-icons">swap_vert</i></a>
+        </div>
+
+        <div class="center">
+            <input type="number" id="frase-id" min="0" max="9">
         </div>
         <ul class="center">
             <li><span id="contador-caracteres">0</span> caracteres</li>
@@ -56,7 +66,9 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/atualiza-frase.js"></script>
+    <script src="js/sync.js"></script>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

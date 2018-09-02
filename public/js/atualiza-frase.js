@@ -1,5 +1,7 @@
 function gerarFraseAleatoria() {
     //let frases = $.get('http://localhost:3000/frases');
+    const spinner = $('#spinner');
+    spinner.show();
     $.get('http://localhost:3000/frases', data => {
         const rand = Math.floor(Math.random() * data.length);
         const frase = data[rand].texto;
@@ -12,6 +14,8 @@ function gerarFraseAleatoria() {
             $("#erro").hide();
             clearTimeout(hideError);
         },5000);
+    }).always(()=>{
+        spinner.hide();
     });
 }
 
@@ -19,5 +23,5 @@ function gerarFraseAleatoria() {
 $('#atualiza-frase').stop().click(gerarFraseAleatoria);
 function atualizaNumeroPalavras(palavra) {
     const qtTamanhoFrase= $('#tamanho-frase');
-    qtTamanhoFrase.text(palavra.split(/\S+/).length);
+    qtTamanhoFrase.text(palavra.split(/\S+/).length-1);
 }
